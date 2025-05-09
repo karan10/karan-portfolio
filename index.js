@@ -1,11 +1,11 @@
 // Data storage
 let aboutData = {
     "title": "About Me",
-    "description": "I'm a full-stack developer who spends most days wondering why my code worked yesterday but not today. I specialize in turning client requirements into something completely different that they'll eventually accept because deadlines.",
+    "description": "I’m an Engineering Manager at Telus Digital AI Data Solutions with deep roots in backend engineering and a strong product mindset. I specialize in building scalable systems, optimizing engineering workflows, and leading high-performing teams. Currently, I’m working on a consumer-focused startup — a Tinder-style app for roommate and flatmate matching — blending AI, intuitive design, and automation to solve real-world problems with zero operational overhead. From AI-driven resume screening tools to GitHub automation bots, I enjoy building end-to-end products that are fast, functional, and fun to use. I’m also passionate about leveraging LLMs, exploring anime-inspired branding, and launching ideas that stick.",
     "personalInfo": {
         "name": "Karan Dev",
-        "email": "karan@example.com",
-        "location": "San Francisco, CA"
+        "email": "karandev43@gmail.com",
+        "location": "Bengaluru, India"
     }
 };
 
@@ -13,18 +13,25 @@ let workData = {
     "title": "Work Experience",
     "experiences": [
         {
-            "title": "Senior Full Stack Developer",
-            "company": "Tech Innovations Inc.",
-            "period": "2020 - Present",
-            "description": "Professional Googler with expertise in copying from Stack Overflow. Spent most of my time explaining to managers why their 'quick fix' would take two weeks.",
-            "url": "https://techinnovations.example.com"
+            "title": "Software Engineering Manager",
+            "company": "Telus Digital [Acquired Playment (YC-w17)]",
+            "period": "2017 - Present",
+            "description": "I started my journey at Telus Digital as a software engineer after Playment’s acquisition and grew into an engineering manager over the years. I’ve built everything from media pipelines and internal tools to GenAI platforms that powered major business wins. Along the way, I’ve led teams, scaled systems, hired great talent, and aligned engineering closely with product impact — all while keeping uptime high and cloud costs low.",
+            "url": "https://www.telusdigital.com/solutions/data-and-ai-solutions"
         },
         {
-            "title": "Full Stack Developer",
-            "company": "Digital Solutions LLC",
-            "period": "2018 - 2020",
-            "description": "Translated client requests like 'make it pop' into actual features. Maintained legacy code held together by duct tape and prayers.",
-            "url": "https://digitalsolutions.example.com"
+            "title": "Software Engineer",
+            "company": "Collegedunia",
+            "period": "2015 - 2017",
+            "description": "At Collegedunia, I worked on high-impact backend systems powering apps like Frizza (5M+ downloads). I built core features like wallet recharges, notifications, and admin tools. I also developed campaign platforms for alumni engagement and advertiser dashboards to streamline data tracking and reporting.",
+            "url": "https://collegedunia.com"
+        },
+        {
+            "title": "Software Engineer",
+            "company": "WealthPack (Acquired By Edelweiss)",
+            "period": "2015 - 2015",
+            "description": "At Wealthpack, I worked on automating personal finance insights — building a PDF generation pipeline using Django and PDFCrowd, creating regex-driven data extraction from emails and SMS, and improving vendor categorization with ElasticSearch for smarter analytics.",
+            "url": "#"
         }
     ]
 };
@@ -33,24 +40,14 @@ let projectsData = {
     "title": "My Projects",
     "projects": [
         {
-            "title": "E-commerce Platform",
-            "description": "A full-featured e-commerce platform with real-time inventory management.",
-            "image": "images/projects/ecommerce.jpg",
-            "tags": ["React", "Node.js", "MongoDB"],
+            "title": "Spotifyi - Weekly wrapped",
+            "description": "Generates weekly Spotify Wrapped-style summaries, giving users insights into their top tracks, artists, and listening patterns. Integrated Spotify OAuth, handled user-specific data securely, and automated visual summaries for shareability — all with a focus on clean UX and lightweight performance.",
+            "image": "images/projects/spotifyi.png",
+            "tags": ["React", "Python"],
             "category": "web",
             "liveLink": "#",
             "codeLink": "#",
-            "url": "https://ecommerce-project.example.com"
-        },
-        {
-            "title": "Task Management App",
-            "description": "A collaborative task management application with real-time updates.",
-            "image": "images/projects/taskmanager.jpg",
-            "tags": ["Vue.js", "Firebase", "Tailwind"],
-            "category": "web",
-            "liveLink": "#",
-            "codeLink": "#",
-            "url": "https://taskmanager-project.example.com"
+            "url": "https://spotifyi.onrender.com/"
         }
     ]
 };
@@ -88,31 +85,24 @@ let animeData = {
 let blogsData = {
     "title": "Latest Blogs",
     "blogs": [
-        {
-            "title": "Web Development Trends in 2023",
-            "date": "June 15, 2023",
-            "image": "images/blogs/webdev.jpg",
-            "excerpt": "Exploring the latest technologies and methodologies that are shaping the future of web development.",
-            "url": "https://blog.example.com/web-dev-trends-2023"
-        },
-        {
-            "title": "The Impact of AI on Software Development",
-            "date": "May 22, 2023",
-            "image": "images/blogs/ai.jpg",
-            "excerpt": "How artificial intelligence is revolutionizing the way we build, test, and deploy software applications.",
-            "url": "https://blog.example.com/ai-software-development"
-        }
+        // {
+        //     "title": "Web Development Trends in 2023",
+        //     "date": "June 15, 2023",
+        //     "image": "images/blogs/webdev.jpg",
+        //     "excerpt": "Exploring the latest technologies and methodologies that are shaping the future of web development.",
+        //     "url": "https://blog.example.com/web-dev-trends-2023"
+        // }
     ]
 };
 
 let contactData = {
     "title": "Contact Me",
-    "email": "karan@example.com",
-    "location": "San Francisco, CA",
+    "email": "karandev43@gmail.com",
+    "location": "Bengaluru, India",
     "socialLinks": {
-        "github": "https://github.com/",
-        "linkedin": "https://linkedin.com/",
-        "twitter": "https://twitter.com/"
+        "github": "https://github.com/karan10",
+        "linkedin": "https://www.linkedin.com/in/karandev",
+        "twitter": "https://twitter.com/iamkarandev"
     }
 };
 
@@ -311,7 +301,7 @@ if (contactForm) {
         console.log('Form submitted:', formValues);
 
         // Show success message
-        alert('Message received! I\'ll add it to my collection of unread emails. Might get back to you... eventually. No promises though.');
+        alert('Message received! I\'ll get back to you soon.');
 
         // Reset form
         contactForm.reset();
