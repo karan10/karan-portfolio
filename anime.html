@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Anime - Karan Dev</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="work.html">work</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="anime.html" class="active">anime</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="anime">
+            <h2>Favorite Anime</h2>
+            <div id="anime-list" class="projects-grid"></div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+    <script>
+      const animeList = document.getElementById('anime-list');
+      animeList.innerHTML = animeData.map(anime => `
+        <div class="project-card">
+          <h3>${anime.title}</h3>
+          <img src="${anime.image}" alt="${anime.title}" style="max-width:220px;width:100%;display:block;margin:0 auto 0.7rem auto;border-radius:8px;">
+          <p><em>${anime.studio}</em></p>
+          <p>${anime.description}</p>
+          <a href="${anime.url}" target="_blank">View on MyAnimeList</a>
+        </div>
+      `).join('');
+    </script>
+</body>
+</html> 

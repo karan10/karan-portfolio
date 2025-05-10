@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience - Karan Dev</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="work.html" class="active">work</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="anime.html">anime</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="work">
+            <h2>Work Experience</h2>
+            <div id="work-timeline" class="timeline"></div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+    <script>
+      const workTimeline = document.getElementById('work-timeline');
+      workTimeline.innerHTML = workData.map(job => `
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>${job.title}</h3>
+            <h4>${job.company}</h4>
+            <p class="timeline-date">${job.period}</p>
+            <p>${job.description}</p>
+            ${job.url && job.url !== '#' ? `<a href="${job.url}" target="_blank" class="timeline-link">View Company</a>` : ''}
+          </div>
+        </div>
+      `).join('');
+    </script>
+</body>
+</html> 
