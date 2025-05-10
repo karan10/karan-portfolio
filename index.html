@@ -3,174 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karan's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Karan Dev</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <aside class="sidebar">
-        <div class="decorative-edge"></div>
-        <div class="left-accent"></div>
-        <div class="logo">
-            <h1>Karan<span>Dev</span></h1>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#work"><i class="fas fa-briefcase"></i> Work</a></li>
-                <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
-                <li><a href="#anime"><i class="fas fa-tv"></i> Anime</a></li>
-                <li><a href="#blogs"><i class="fas fa-blog"></i> Blogs</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-        <div class="social-links sidebar-social">
-            <a href="#" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank" class="linkedin-link"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank" class="twitter-link"><i class="fab fa-twitter"></i></a>
-            <div class="bottom-line"></div>
-        </div>
-    </aside>
-
-    <main class="main-content">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">home</a></li>
+            <li><a href="work.html">work</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="anime.html">anime</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+    <main>
         <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Hi, I'm <span class="highlight">Karan</span></h1><br>
-                    <h2>Engineer</h2>
-                    <p>Engineer with a builder’s bias, product’s intuition, and a founder’s lens.</p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn primary-btn">View My Work</a>
-                        <a href="#contact" class="btn secondary-btn">Hire Me (Please)</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank" class="linkedin-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank" class="twitter-link"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
+            <div id="home-hero" style="display: flex; align-items: center; gap: 2rem;"></div>
         </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title"><span>About Me</span></h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p class="about-description"></p>
-                        <div class="personal-info">
-                            <div class="info-item">
-                                <span class="info-title">Name:</span>
-                                <span class="info-value name-value"></span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-title">Email:</span>
-                                <span class="info-value email-value"></span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-title">Location:</span>
-                                <span class="info-value location-value"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image">
-                        <div class="image-container">
-                            <img src="https://via.placeholder.com/400x500" alt="Karan Dev">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="work" class="work">
-            <div class="container">
-                <h2 class="section-title"><span>Work Experience</span></h2>
-                <div class="timeline">
-                    <!-- Timeline items will be dynamically inserted here -->
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title"><span>My Projects</span></h2>
-                <div class="projects-filter">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile</button>
-                    <button class="filter-btn" data-filter="other">Other</button>
-                </div>
-                <div class="projects-grid" id="projects-container">
-                    <!-- Projects will be dynamically inserted here -->
-                </div>
-            </div>
-        </section>
-
-        <section id="anime" class="anime">
-            <div class="container">
-                <h2 class="section-title"><span>Favorite Anime</span></h2>
-                <div class="anime-grid">
-                    <!-- Anime cards will be dynamically inserted here -->
-                </div>
-            </div>
-        </section>
-
-        <section id="blogs" class="blogs">
-            <div class="container">
-                <h2 class="section-title"><span>Latest Blogs</span></h2>
-                <div class="blogs-grid">
-                    <!-- Blog cards will be dynamically inserted here -->
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title"><span>Contact Me</span></h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h3>Email</h3>
-                                <p class="contact-email"></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h3>Location</h3>
-                                <p class="contact-location"></p>
-                            </div>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
-                            <a href="#" target="_blank" class="linkedin-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" target="_blank" class="twitter-link"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
+        <section id="about-home">
+            <div id="about-content" class="about-content"></div>
         </section>
     </main>
-
-    <script src="index.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      // Render hero section dynamically, image on right
+      const homeHero = document.getElementById('home-hero');
+      homeHero.innerHTML = `
+        <div class="hero-content" style="flex:1;">
+          <h1>Hi! I'm ${homeData.name}</h1>
+          <h2>Software Engineer</h2>
+          <p>Engineer with a builder's bias, product's intuition, and a founder's lens.</p>
+          <div class="social-links">
+            <a href="${homeData.socialLinks.github}" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="${homeData.socialLinks.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="${homeData.socialLinks.twitter}" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <img src="${homeData.profileImage}" alt="${homeData.name}" class="profile-pic">
+      `;
+      // Render about details dynamically
+      const aboutContent = document.getElementById('about-content');
+      aboutContent.innerHTML = `
+        ${homeData.description.map(p => `<p>${p}</p>`).join('')}
+        <div class="personal-info">
+          <div class="info-item"><span class="info-title">Name:</span> <span class="info-value">${homeData.name}</span></div>
+          <div class="info-item"><span class="info-title">Email:</span> <span class="info-value">${homeData.email}</span></div>
+          <div class="info-item"><span class="info-title">Location:</span> <span class="info-value">${homeData.location}</span></div>
+        </div>
+      `;
+    </script>
 </body>
 </html>
