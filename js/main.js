@@ -6,8 +6,7 @@ const homeData = {
     profileImage: "assets/images/home/karan.jpg",
     description: [
         "I'm an Engineering Manager at Telus Digital AI Data Solutions with deep roots in backend engineering and a strong product mindset. I specialize in building scalable systems, optimizing engineering workflows, and leading high-performing teams.",
-        "Currently, I'm working on a consumer-focused startup — a Tinder-style app for roommate and flatmate matching — blending AI, intuitive design, and automation to solve real-world problems with zero operational overhead.",
-        "From AI-driven resume screening tools to GitHub automation bots, I enjoy building end-to-end products that are fast, functional, and fun to use. I'm also passionate about leveraging LLMs, exploring anime-inspired branding, and launching ideas that stick."
+        "I enjoy building end-to-end products that are fast, functional, and fun to use. I'm also passionate about leveraging LLMs, exploring anime-inspired branding, and launching ideas that stick."
     ],
     socialLinks: {
         github: "https://github.com/karan10",
