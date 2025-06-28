@@ -24,18 +24,5 @@
         </section>
     </main>
     <script src="js/main.js"></script>
-    <script>
-      const projectsList = document.getElementById('projects-list');
-      projectsList.innerHTML = projectsData.map(project => `
-        <div class="project-card">
-          <h3>${project.title}</h3>
-          <img src="${project.image}" alt="${project.title}" style="max-width:220px;width:100%;display:block;margin:0 auto 0.7rem auto;border-radius:8px;">
-          <p>${project.description}</p>
-          <div class="project-links">
-            <a href="${project.url}" target="_blank">View Project</a>
-          </div>
-        </div>
-      `).join('');
-    </script>
 </body>
 </html> 

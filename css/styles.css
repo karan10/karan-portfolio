@@ -132,40 +132,529 @@ a:hover {
 }
 
 .timeline {
-    border-left: 2px solid #444;
-    margin-left: 0.5rem;
-    padding-left: 1.5rem;
+    position: relative;
+    border-left: 3px solid var(--accent-color);
+    margin-left: 1rem;
+    padding-left: 2rem;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    border: 3px solid var(--background-color);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        box-shadow: 0 0 0 0 rgba(79, 195, 247, 0.4); 
+    }
+    50% { 
+        box-shadow: 0 0 0 8px rgba(79, 195, 247, 0); 
+    }
 }
 
 .timeline-item {
-    margin-bottom: 2rem;
+    position: relative;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.timeline-content h3, .timeline-content h4 {
-    margin-bottom: 0.2rem;
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 0.5rem;
+    width: 14px;
+    height: 14px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    border: 3px solid var(--background-color);
+    box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.2);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 6px rgba(79, 195, 247, 0.3);
+}
+
+.timeline-item:last-child::after {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 1.2rem;
+    width: 14px;
+    height: 14px;
+    background: var(--background-color);
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.timeline-content {
+    background: rgba(79, 195, 247, 0.03);
+    border: 1px solid rgba(79, 195, 247, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-color);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+    background: rgba(79, 195, 247, 0.05);
+    border-color: rgba(79, 195, 247, 0.2);
+    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.1);
+}
+
+.timeline-content:hover::before {
+    transform: scaleY(1);
+}
+
+.timeline-content h3 {
+    color: var(--heading-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.timeline-content h4 {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
 .timeline-date {
     color: var(--subheading-color);
-    font-size: 0.98rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.timeline-date::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.timeline-content:hover .timeline-date::after {
+    width: 100%;
+}
+
+.timeline-content p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.timeline-link {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-color);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.timeline-link:hover {
+    color: var(--background-color);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 195, 247, 0.3);
+}
+
+.timeline-link:hover::before {
+    left: 0;
 }
 
 .projects-grid {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .project-card {
+    background: rgba(79, 195, 247, 0.03);
+    border: 1px solid rgba(79, 195, 247, 0.1);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: fit-content;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-color);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: rgba(79, 195, 247, 0.05);
+    border-color: rgba(79, 195, 247, 0.2);
+    box-shadow: 0 8px 25px rgba(79, 195, 247, 0.1);
+}
+
+.project-card:hover::before {
+    transform: scaleY(1);
+}
+
+.project-card h3 {
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.02);
+}
+
+.project-card p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+}
+
+.project-card p em {
+    color: var(--accent-color);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.project-card .description-container {
+    position: relative;
+    margin-bottom: 0.8rem;
+    flex-grow: 1;
+}
+
+.project-card .description-text {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    transition: all 0.3s ease;
+}
+
+.project-card .description-text.expanded {
+    -webkit-line-clamp: unset;
+}
+
+.project-card .more-button {
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
     background: none;
     border: none;
     padding: 0;
-    margin-bottom: 2rem;
+    margin-top: 0.3rem;
+    transition: all 0.3s ease;
+    font-family: var(--font-family);
 }
 
-.project-links a {
-    color: var(--accent-color);
+.project-card .more-button:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.project-card .rating-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    margin-top: auto;
+}
+
+.project-card .rating-stars {
+    display: flex;
+    gap: 0.1rem;
+}
+
+.project-card .star {
+    color: #ffd700;
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.project-card .star.empty {
+    color: rgba(255, 215, 0, 0.3);
+}
+
+.project-card .rating-text {
+    color: var(--subheading-color);
+    font-size: 0.8rem;
     font-weight: 500;
-    margin-right: 1.2rem;
+}
+
+.project-card .card-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.project-card .project-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+    justify-content: flex-end;
+}
+
+.project-card .project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card .project-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-color);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.project-card .project-links a:hover {
+    color: var(--background-color);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 195, 247, 0.3);
+}
+
+.project-card .project-links a:hover::before {
+    left: 0;
+}
+
+.project-card .imdb-logo {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+/* Filters and Sorting Styles */
+.anime-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    color: var(--subheading-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.filter-group select {
+    background: rgba(79, 195, 247, 0.05);
+    border: 1px solid rgba(79, 195, 247, 0.2);
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-group select:hover {
+    border-color: var(--accent-color);
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(79, 195, 247, 0.2);
+}
+
+.sort-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sort-group label {
+    color: var(--subheading-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.sort-group select {
+    background: rgba(79, 195, 247, 0.05);
+    border: 1px solid rgba(79, 195, 247, 0.2);
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sort-group select:hover {
+    border-color: var(--accent-color);
+}
+
+.sort-group select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(79, 195, 247, 0.2);
+}
+
+.anime-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.anime-badge.watching {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.anime-badge.completed {
+    background: rgba(79, 195, 247, 0.2);
+    color: var(--accent-color);
+    border: 1px solid rgba(79, 195, 247, 0.3);
+}
+
+.anime-badge.planning {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+    border: 1px solid rgba(255, 152, 0, 0.3);
 }
 
 .contact-form {
@@ -227,5 +716,91 @@ a:hover {
     .profile-pic {
         width: 90px;
         height: 90px;
+    }
+    
+    .timeline {
+        margin-left: 0.5rem;
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-item::before {
+        left: -2rem;
+        width: 12px;
+        height: 12px;
+    }
+    
+    .timeline-item:last-child::after {
+        left: -2rem;
+        width: 12px;
+        height: 12px;
+    }
+    
+    .timeline-content {
+        padding: 1.2rem;
+        margin-left: 0.3rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-content h4 {
+        font-size: 1rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.95rem;
+    }
+    
+    .timeline-link {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        padding: 1.2rem;
+    }
+    
+    .project-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-card img {
+        height: 180px;
+    }
+    
+    .project-card p {
+        font-size: 0.95rem;
+    }
+    
+    .project-card a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .anime-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+    
+    .filter-group, .sort-group {
+        justify-content: space-between;
+    }
+    
+    .filter-group select, .sort-group select {
+        flex: 1;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 701px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
