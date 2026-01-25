@@ -1,11 +1,11 @@
 const workData = [
   {
-    title: "Indie AI Builder & Engineering Leader",
-    company: "Independent Projects",
+    title: "Software Engineering Consultant (Freelance)",
+    company: "Plutox AI",
     period: "2025 - Present",
     description:
-      "Currently building AI-driven products as an indie builder, focused on solving meaningful problems in the consumer and productivity space. My work spans from designing backend architectures and integrating LLMs to crafting user-centric experiences — leveraging my background in engineering leadership, scalable systems, and product thinking.",
-    url: ""
+      "Working as a freelance software engineering consultant, supporting Plutox AI on product and platform development across backend systems, integrations, and reliability improvements.",
+    url: "https://plutoxai.com"
   },
   {
     title: "Software Engineering Manager",
