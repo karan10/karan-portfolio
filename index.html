@@ -1,57 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Karan Dev</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">home</a></li>
-            <li><a href="work.html">work</a></li>
-            <li><a href="projects.html">projects</a></li>
-            <li><a href="anime.html">anime</a></li>
-            <li><a href="contact.html">contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="home" class="hero">
-            <div id="home-hero" style="display: flex; align-items: center; gap: 2rem;"></div>
-        </section>
-        <section id="about-home">
-            <div id="about-content" class="about-content"></div>
-        </section>
-    </main>
-    <script src="js/main.js"></script>
-    <script>
-      // Render hero section dynamically, image on right
-      const homeHero = document.getElementById('home-hero');
-      homeHero.innerHTML = `
-        <div class="hero-content" style="flex:1;">
-          <h1>Hi! I'm ${homeData.name}</h1>
-          <h2>Software Engineer</h2>
-          <p>Engineer with a builder's bias, product's intuition, and a founder's lens.</p>
-          <div class="social-links">
-            <a href="${homeData.socialLinks.github}" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="${homeData.socialLinks.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="${homeData.socialLinks.x}" target="_blank"><i class="fab fa-x-twitter"></i></a>
-          </div>
-        </div>
-        <img src="${homeData.profileImage}" alt="${homeData.name}" class="profile-pic">
-      `;
-      // Render about details dynamically
-      const aboutContent = document.getElementById('about-content');
-      aboutContent.innerHTML = `
-        ${homeData.description.map(p => `<p>${p}</p>`).join('')}
-        <div class="personal-info">
-          <div class="info-item"><span class="info-title">Name:</span> <span class="info-value">${homeData.name}</span></div>
-          <div class="info-item"><span class="info-title">Email:</span> <span class="info-value">${homeData.email}</span></div>
-          <div class="info-item"><span class="info-title">Location:</span> <span class="info-value">${homeData.location}</span></div>
-        </div>
-      `;
-    </script>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

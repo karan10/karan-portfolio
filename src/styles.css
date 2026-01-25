@@ -562,6 +562,40 @@ a:hover {
     align-items: center;
 }
 
+.search-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-group label {
+    color: var(--subheading-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.search-group input {
+    background: rgba(79, 195, 247, 0.05);
+    border: 1px solid rgba(79, 195, 247, 0.2);
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    min-width: 220px;
+    transition: all 0.3s ease;
+}
+
+.search-group input:hover {
+    border-color: var(--accent-color);
+}
+
+.search-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(79, 195, 247, 0.2);
+}
+
 .filter-group {
     display: flex;
     align-items: center;
@@ -789,13 +823,17 @@ a:hover {
         gap: 0.8rem;
     }
     
-    .filter-group, .sort-group {
+    .search-group,
+    .filter-group,
+    .sort-group {
         justify-content: space-between;
     }
     
-    .filter-group select, .sort-group select {
+    .search-group input,
+    .filter-group select,
+    .sort-group select {
         flex: 1;
-        max-width: 200px;
+        max-width: 260px;
     }
 }
 
