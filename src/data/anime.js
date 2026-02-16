@@ -326,6 +326,17 @@ const animeData = [
         type: "movie",
         rating: 3,
         status: "completed"
+    },
+    {
+        title: "The Fragrant Flower Blooms with Dignity",
+        studio: "TBD",
+        description:
+            "A quiet boy from a rough school befriends a girl from a nearby elite school, and their bond blossoms despite social expectations.",
+        image: "https://upload.wikimedia.org/wikipedia/en/a/a5/Kaoru_Hana_wa_Rin_to_Saku_volume_1_cover.jpg",
+        imdbUrl: "https://www.imdb.com/",
+        type: "series",
+        rating: 3,
+        status: "watching"
     }
 ];
 

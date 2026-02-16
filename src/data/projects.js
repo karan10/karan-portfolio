@@ -12,6 +12,13 @@ const projectsData = [
             "An AI-powered health intelligence layer built on top of wearable data. UltraAI analyzes raw biometric signals like sleep, heart rate, HRV, and activity to generate clear summaries, personalized insights, and actionable daily recommendations — focusing on signal over noise, explainability, and real-world usability.",
         image: "/assets/images/projects/ultraai.png",
         url: "https://ultraai.imkaran.dev/"
+    },
+    {
+        title: "Rage Detector – “Bro Calm Down” Engine",
+        description:
+            "Detects aggressive typing patterns in real time and intervenes before burnout kicks in. Tracks typing speed spikes, backspace bursts, and key smashing to trigger calm-down nudges or short system locks.",
+        image: "/assets/images/projects/rage_detector.png",
+        url: "https://github.com/AI-Architechs/RageDetector"
     }
 ];
 
