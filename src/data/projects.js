@@ -19,6 +19,12 @@ const projectsData = [
             "Detects aggressive typing patterns in real time and intervenes before burnout kicks in. Tracks typing speed spikes, backspace bursts, and key smashing to trigger calm-down nudges or short system locks.",
         image: "/assets/images/projects/rage_detector.png",
         url: "https://github.com/AI-Architechs/RageDetector"
+    },
+    {
+        title: "ZeroNoise – Personal Feed Noise Filter",
+        description: "A Chrome extension that learns from what *you* hide to automatically filter similar social media noise. Runs fully local with no servers, tracking, or accounts — you train it with your actions.",
+        image: "/assets/images/projects/zero_noise.png",
+        url: "https://github.com/AI-Architechs/ZeroNoise"
     }
 ];
 
