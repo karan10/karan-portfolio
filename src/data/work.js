@@ -4,7 +4,7 @@ const workData = [
         company: "Plutox AI",
         period: "Nov 2025 - May 2026",
         description:
-            "Served as a founding engineering consultant for APQR (Annual Product Quality Review), a regulated pharma quality platform. Led backend architecture, platform foundations, and core product development using Go, PostgreSQL. Designed domain models, PDF report generation pipeline and workflow orchestration."
+            "Served as a founding engineering consultant for APQR (Annual Product Quality Review), a regulated pharma quality platform. Led backend architecture, platform foundations, and core product development using Go, PostgreSQL. Designed domain models, PDF report generation pipeline and workflow orchestration.",
         url: "https://plutoxai.com"
     },
     {
