@@ -1,5 +1,13 @@
 const workData = [
     {
+        title: "Founder",
+        company: "Roomia",
+        period: "Nov 2025 - Present",
+        description:
+            "Building Roomia - compatibility-first flatmate matching app, live on iOS + Android in Bangalore. Ranks matches on lifestyle compatibility (sleep, cleanliness, guests, noise) instead of just listing flats. Zero brokers, zero fees, shareable profiles, in-app chat.",
+        url: "https://roomia.app"
+    },
+    {
         title: "Principal Software Engineering Consultant (Freelance)",
         company: "Plutox AI",
         period: "Nov 2025 - May 2026",
