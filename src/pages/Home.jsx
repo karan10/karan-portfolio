@@ -38,8 +38,8 @@ const Home = () => {
             <h1 style={{ borderRight: isTyping ? "2px solid var(--accent-color)" : "none" }}>
               {typedTitle}
             </h1>
-            <h2>Software Engineer</h2>
-            <p>Engineer with a builder's bias, product's intuition, and a founder's lens.</p>
+            <h2>Founder of Roomia</h2>
+            <p>An engineer who thinks about the product and the business, not just the code.</p>
             <div className="social-links">
               <a href={homeData.socialLinks.github} target="_blank" rel="noreferrer">
                 <i className="fab fa-github"></i>

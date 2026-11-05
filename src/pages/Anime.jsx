@@ -87,7 +87,7 @@ const Anime = () => {
   return (
     <main>
       <section className="anime">
-        <h2>Animes</h2>
+        <h2>Anime</h2>
         <div className="anime-controls">
           <div className="search-group">
             <label htmlFor="anime-search">Search:</label>

@@ -4,7 +4,7 @@ const workData = [
         company: "Roomia",
         period: "Nov 2025 - Present",
         description:
-            "Building Roomia - compatibility-first flatmate matching app, live on iOS + Android in Bangalore. Ranks matches on lifestyle compatibility (sleep, cleanliness, guests, noise) instead of just listing flats. Zero brokers, zero fees, shareable profiles, in-app chat.",
+            "I'm building Roomia, an app that helps you find a flatmate you'll get along with. It's live on iOS and Android in Bangalore. Instead of just listing flats, it matches people on lifestyle: sleep, cleanliness, guests, and noise. No brokers, no fees. It also has shareable profiles and in-app chat.",
         url: "https://roomia.app"
     },
     {
@@ -12,7 +12,7 @@ const workData = [
         company: "Plutox AI",
         period: "Nov 2025 - May 2026",
         description:
-            "Served as a founding engineering consultant for APQR (Annual Product Quality Review), a regulated pharma quality platform. Led backend architecture, platform foundations, and core product development using Go, PostgreSQL. Designed domain models, PDF report generation pipeline and workflow orchestration.",
+            "I was a founding engineering consultant for APQR (Annual Product Quality Review), a quality platform for the regulated pharma industry. I led the backend design and core product work using Go and PostgreSQL. I designed the data models, the PDF report pipeline, and the workflow system.",
         url: "https://plutoxai.com"
     },
     {
@@ -20,7 +20,7 @@ const workData = [
         company: "Telus Digital AI Data Solutions [Acquired Playment (YC-w17)]",
         period: "July 2017 - June 2025",
         description:
-            "I started my journey at Telus Digital as a software engineer after Playment's acquisition and grew into an engineering manager over the years. I've built everything from media pipelines and internal tools to GenAI platforms that powered major business wins. Along the way, I've led teams, scaled systems, hired great talent, and aligned engineering closely with product impact — all while keeping uptime high and cloud costs low.",
+            "I joined Telus Digital as a software engineer after the Playment acquisition and grew into an engineering manager. I built media pipelines, internal tools, and GenAI platforms that helped win major business. I led teams, hired engineers, and scaled systems, while keeping uptime high and cloud costs low.",
         url: "https://www.telusdigital.com/solutions/data-and-ai-solutions"
     },
     {
@@ -28,7 +28,7 @@ const workData = [
         company: "Collegedunia",
         period: "2015 - 2017",
         description:
-            "At Collegedunia, I worked on high-impact backend systems powering apps like Frizza (5M+ downloads). I built core features like wallet recharges, notifications, and admin tools. I also developed campaign platforms for alumni engagement and advertiser dashboards to streamline data tracking and reporting.",
+            "I worked on backend systems for apps like Frizza (5M+ downloads). I built wallet recharges, notifications, and admin tools. I also built campaign platforms for alumni engagement and dashboards that made it easier for advertisers to track data and reports.",
         url: "https://collegedunia.com"
     },
     {
@@ -36,7 +36,7 @@ const workData = [
         company: "WealthPack (Acquired By Edelweiss)",
         period: "2015 - 2015",
         description:
-            "At Wealthpack, I worked on automating personal finance insights — building a PDF generation pipeline using Django and PDFCrowd, creating regex-driven data extraction from emails and SMS, and improving vendor categorization with ElasticSearch for smarter analytics.",
+            "I helped automate personal finance insights. I built a PDF generation pipeline with Django and PDFCrowd, pulled data from emails and SMS using regex, and improved vendor categorization with ElasticSearch for better analytics.",
         url: "#"
     }
 ];
